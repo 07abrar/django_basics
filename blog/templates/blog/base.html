@@ -13,6 +13,9 @@
     </head>
         <body>
             <header>
+                <a href="{% url 'post_new' %}">
+                    {% include './icons/file-earmark-plus.svg' %}
+                </a>
                 <h1><a href="/">07abrar</a></h1>
             </header>
             {% block content %}
