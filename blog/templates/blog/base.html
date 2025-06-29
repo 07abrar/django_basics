@@ -13,9 +13,11 @@
     </head>
         <body>
             <header>
-                <a href="{% url 'post_new' %}">
-                    {% include './icons/file-earmark-plus.svg' %}
-                </a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'post_new' %}">
+                        {% include './icons/file-earmark-plus.svg' %}
+                    </a>
+                {% endif %}
                 <h1><a href="/">07abrar</a></h1>
             </header>
             {% block content %}
